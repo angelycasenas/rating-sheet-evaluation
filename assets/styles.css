@@ -1,0 +1,383 @@
+
+
+:root {
+    --dark: #222;
+    --line: #333;
+    --light: #f7f7f7;
+    --star: #d4a017;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    padding: 12px;
+    font-family: "Times New Roman", serif;
+    color: var(--dark);
+    background: #ffffff;
+}
+
+.toolbar,
+.status,
+.page {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+button {
+    padding: 10px 14px;
+    border: 1px solid #bbb;
+    background: rgb(1, 198, 252);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 6px;
+    min-height: 42px;
+    flex: 1 1 180px;
+}
+
+button:hover {
+    background: #f3f3f3;
+}
+
+.status {
+    margin-bottom: 12px;
+    font-size: 14px;
+    min-height: 18px;
+    font-weight: bold;
+    word-break: break-word;
+}
+
+.page {
+    border: 1px solid #ddd;
+    padding: 16px;
+    background: #fff;
+}
+
+.header-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.footer-image {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    display: block;
+}
+
+.header-wrap {
+    margin-bottom: 16px;
+}
+
+.footer-wrap {
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 18px;
+    margin: 16px 0;
+    letter-spacing: 0.2px;
+    line-height: 1.3;
+}
+
+.page-subtitle {
+    text-align: center;
+    margin-top: -6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.info-row {
+    margin: 8px 0;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    align-items: center;
+}
+
+.info-row label {
+    display: block;
+    width: 100%;
+}
+
+.input-line {
+    border: none;
+    border-bottom: 1px solid #000;
+    min-width: 0;
+    width: 100%;
+    font: inherit;
+    background: transparent;
+    outline: none;
+    padding: 4px;
+}
+
+.input-line.medium,
+.input-line.long {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+select.input-line {
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    font: inherit;
+    background: transparent;
+    outline: none;
+    padding: 4px;
+}
+
+.section-label {
+    margin: 18px 0 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 13px;
+    table-layout: fixed;
+}
+
+th,
+td {
+    border: 1px solid var(--line);
+    padding: 8px 6px;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+th {
+    background: var(--light);
+    text-align: center;
+}
+
+td.center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.subhead {
+    font-weight: bold;
+    background: #fafafa;
+}
+
+.star-rating {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    color: #cfcfcf;
+    user-select: none;
+}
+
+.star-rating label:hover,
+.star-rating label:hover~label,
+.star-rating input:checked~label {
+    color: var(--star);
+}
+
+.total-cell {
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+}
+
+.check-section {
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.checks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px 16px;
+    margin-top: 10px;
+}
+
+.check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.tickbox {
+    width: 16px;
+    height: 16px;
+    margin: 2px 0 0 0;
+    accent-color: #000;
+    flex-shrink: 0;
+}
+
+.rated-by {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.signature-caption {
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.hidden {
+    display: none;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.rates-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.rates-table th,
+.rates-table td {
+    white-space: normal;
+    font-size: 12px;
+    word-break: break-word;
+}
+
+.rates-table td.wrap {
+    white-space: normal;
+}
+
+.action-cell button {
+    min-width: unset;
+    width: 100%;
+    flex: unset;
+}
+
+@media (min-width: 640px) {
+    body {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .page-subtitle,
+    .rated-by,
+    .info-row,
+    .check-section {
+        font-size: 15px;
+    }
+
+    .checks {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rates-table th,
+    .rates-table td {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        padding: 24px;
+    }
+
+    .page {
+        padding: 22px 34px 30px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin: 20px 0;
+        letter-spacing: 0.4px;
+    }
+
+    .page-subtitle {
+        font-size: 16px;
+    }
+
+    .info-row {
+        font-size: 15px;
+    }
+
+    table {
+        font-size: 15px;
+    }
+
+    .rates-table th,
+    .rates-table td {
+        font-size: 14px;
+    }
+
+    .footer-image {
+        width: 25%;
+        max-width: 280px;
+    }
+
+    .star-rating label {
+        font-size: 22px;
+    }
+}
+
+@media print {
+    html,
+    body {
+        overflow: visible;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .toolbar,
+    .status {
+        display: none;
+    }
+
+    .page {
+        width: 100%;
+        border: none;
+        padding: 12px 18px 20px;
+    }
+}
